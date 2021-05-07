@@ -7,3 +7,7 @@ import App from './App';
 import {name as appName} from './app.json';
 
 AppRegistry.registerComponent(appName, () => App);
+AppRegistry.registerComponent('ARKit2BusinessCard', () => App);
+
+// The below line is necessary for use with the TestBed App
+AppRegistry.registerComponent('ViroSample', () => App);

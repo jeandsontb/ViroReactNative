@@ -1,28 +1,48 @@
-import React from 'react';
+import React, { Component } from 'react';
 
-import { View, Text, StyleSheet } from 'react-native';
+import {
+  ViroARSceneNavigator
+} from '@viro-community/react-viro';
 
-const App = () => {
-  return (
-    <View style={styles.component}>
-      <Text style={styles.text} >
-        Projete o seu código aqui
-      </Text>
-    </View>
-  )
+import BusinessCard from './js/BusinessCard';
+
+export default class ViroSample extends Component {
+  
+  render() {
+    return (
+      <ViroARSceneNavigator 
+        // apiKey="1839C275-6929-45AF-B638-EF2DEE44C1D9"
+        numberOfTrackedImages={2}
+        initialScene={{scene: BusinessCard}} 
+      />
+    )
+  }
 }
 
 
-const styles = StyleSheet.create({
-  component:{
-    flex:1,
-    justifyContent:'center',
-    alignItems:'center'
-  },
-  text:{
-    fontSize:20,
-    fontFamily: 'Roboto'
-  }
-})
+module.exports = ViroSample
 
-export default App;
+// import React from 'react';
+// import { View, Text, StyleSheet } from 'react-native';
+
+// export default function App() {
+//   return (
+//     <View style={styles.container}>
+//       <Text style={styles.text}>
+//         Projeto configurado para viroreact
+//       </Text>
+//     </View>
+//   );
+// }
+
+// const styles = StyleSheet.create({
+//   container:{
+//     flex:1,
+//     justifyContent:'center',
+//     alignItems:'center'
+//   },
+//   text:{
+//     fontSize:16,
+//     fontFamily: 'Roboto'
+//   }
+// })
